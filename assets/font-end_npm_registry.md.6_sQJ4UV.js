@@ -1,0 +1,48 @@
+import{_ as a,o as n,c as i,a3 as e}from"./chunks/framework.QX3Xs2QT.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"font-end/npm/registry.md","filePath":"font-end/npm/registry.md"}'),p={name:"font-end/npm/registry.md"};function l(t,s,r,h,o,k){return n(),i("div",null,s[0]||(s[0]=[e(`<h2 id="npm-registry" tabindex="-1">npm registry <a class="header-anchor" href="#npm-registry" aria-label="Permalink to &quot;npm registry&quot;">​</a></h2><blockquote><p><a href="https://www.npmjs.com/" target="_blank" rel="noreferrer">npmjs</a></p><p><a href="https://npmmirror.com/" target="_blank" rel="noreferrer">npmmirror</a> 使用国内镜像</p></blockquote><h2 id="npm-和-pnpm-文档" tabindex="-1">npm 和 pnpm 文档 <a class="header-anchor" href="#npm-和-pnpm-文档" aria-label="Permalink to &quot;npm 和 pnpm 文档&quot;">​</a></h2><table tabindex="0"><thead><tr><th>官网</th><th>中文网</th></tr></thead><tbody><tr><td></td><td><a href="https://npm.nodejs.cn/" target="_blank" rel="noreferrer">npm</a></td></tr><tr><td><a href="https://pnpm.io/" target="_blank" rel="noreferrer">pnpm</a></td><td><a href="https://pnpm.nodejs.cn/" target="_blank" rel="noreferrer">pnpm</a></td></tr></tbody></table><ul><li>npm 和 pnpm 都有软链</li><li>package.json中字段：<a href="https://blog.csdn.net/qq_41581588/article/details/139225572" target="_blank" rel="noreferrer">https://blog.csdn.net/qq_41581588/article/details/139225572</a></li></ul><h2 id="依赖结构" tabindex="-1">依赖结构 <a class="header-anchor" href="#依赖结构" aria-label="Permalink to &quot;依赖结构&quot;">​</a></h2><blockquote><p>扁平结构（存在幽灵依赖：可以引用未在项目package.json中声明的依赖） 非扁平结构，再加上符号链接实现依赖的嵌套结构</p></blockquote><p>npm默认是扁平结构，pnpm 默认是非扁平结构，pnpm 可以在.npmrc中设置 <code>shamefully-hoist=true</code> 为扁平结构</p><h2 id="overrides" tabindex="-1">overrides <a class="header-anchor" href="#overrides" aria-label="Permalink to &quot;overrides&quot;">​</a></h2><blockquote><p>需要对依赖的依赖进行特定更改，比如通过升级版本来修复安全问题。</p></blockquote><ul><li><p>使用npm管理：<a href="https://npm.nodejs.cn/cli/v10/configuring-npm/package-json#overrides" target="_blank" rel="noreferrer">https://npm.nodejs.cn/cli/v10/configuring-npm/package-json#overrides</a></p><div class="language-json vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;overrides&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    &quot;element-ui&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;async-validator&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;latest&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div></li><li><p>使用pnpm管理：<a href="https://pnpm.io/package_json#pnpmoverrides" target="_blank" rel="noreferrer">https://pnpm.io/package_json#pnpmoverrides</a></p><div class="language-json vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;pnpm&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    &quot;overrides&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;element-ui&gt;async-validator&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;latest&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div></li></ul><h2 id="持续集成安装依赖" tabindex="-1">持续集成安装依赖 <a class="header-anchor" href="#持续集成安装依赖" aria-label="Permalink to &quot;持续集成安装依赖&quot;">​</a></h2><blockquote><p>依据锁文件安装依赖，锁文件与package.json不同步则报错，不会自动更新锁文件自动更新依赖版本</p></blockquote><ul><li><code>npm ci</code></li><li><code>pnpm i --frozen-lockfile</code></li></ul><h2 id="从缓存离线安装" tabindex="-1">从缓存离线安装 <a class="header-anchor" href="#从缓存离线安装" aria-label="Permalink to &quot;从缓存离线安装&quot;">​</a></h2><ul><li><code>npm i --offline</code> 完全离线</li><li><code>npm i --prefer-offline</code> 优先离线，且绕过缓存数据的过时检查</li><li><code>pnpm i --offline</code> 完全离线</li><li><code>pnpm i --prefer-offline</code> 优先离线，且绕过缓存数据的过时检查</li></ul><h2 id="pnpm-细节" tabindex="-1">pnpm 细节 <a class="header-anchor" href="#pnpm-细节" aria-label="Permalink to &quot;pnpm 细节&quot;">​</a></h2><blockquote><p>安装：使用nodejs的 <code>corepack</code> 管理和启用pnpm，需要nodejs版本v16.13以上.</p></blockquote><div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 安装所有依赖（默认在线下载、下载开发和生产依赖）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> i</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># =========================从缓存中下载策略============================</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置为true：仅从 store 中离线下载.如果缓存中没有找不到这个包，那么就会安装失败</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 默认： false</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--offline</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置为true：优先从缓存中离线下载（绕过版本更新检查），缓存中没有的从线上下载</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 默认： false</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--prefer-offline</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># ========================下载开发/生产依赖策略=======================</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置为true：下载依赖（排除 devDependencies，如果devDependencies依赖存在则移除）；</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置为false：下载依赖（listed in devDependencies and dependencies）</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 默认：If NODE_ENV is not production: false ；If NODE_ENV is production: true</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--prod,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -P</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置后：只下载devDependencies，如果dependencies依赖存在则移除</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--dev,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -D</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置后：optionalDependencies are not installed.</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--no-optional</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># =====================与lock相关==============================</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置后：只会updates pnpm-lock.yaml and package.json，不会动 node_modules</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--lockfile-only</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置后：自动修复损坏的 lock 文件入口。</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--fix-lockfile</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 用于ci环境</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">--frozen-lockfile</span></span></code></pre></div>`,19)]))}const g=a(p,[["render",l]]);export{c as __pageData,g as default};
